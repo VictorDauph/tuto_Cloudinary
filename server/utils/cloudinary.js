@@ -1,3 +1,4 @@
+//le fichier de config de cloudinary importe le plugin de cloudinary et les variables d'environnement nécessaire pour se connecter à l'API cloudinary
 require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 cloudinary.config({
