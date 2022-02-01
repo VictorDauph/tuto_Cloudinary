@@ -8,6 +8,7 @@ export default function Home() {
         try {
             const res = await fetch('/api/images');
             const data = await res.json();
+            console.log("data",data)
             //on fetch iles id des images et on les stock dans un state
             setImageIds(data);
         } catch (err) {
@@ -24,7 +25,7 @@ export default function Home() {
             </div>
             <div className="gallery"> {/* les id des images sont traités par le composant image qui de vient de cloudinary-React et permet de charger une image à partire du cloudname et de son ID*/}
                 {imageIds &&
-                    imageIds.map((imageId, index) => ( 
+                    imageIds.map((imageId, index) => (
                         <Image
                             key={index}
                             cloudName={process.env.REACT_APP_CLOUDINARY_NAME} 

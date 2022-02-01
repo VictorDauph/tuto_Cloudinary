@@ -16,7 +16,7 @@ export default function Upload() {
 
     //preview file sert à afficher l'image que l'utilisteu va uploader
     const previewFile = (file) => {
-        //FileReader est un composant préconfiguré Javascript qui permet de lire un fichier
+        //FileReader est un composant préconfiguré React qui permet de lire un fichier
         const reader = new FileReader();
         //readAsDataURL transforme le contenu de l'objet (ici, l'image) en une chaîne de caractères
         reader.readAsDataURL(file);
